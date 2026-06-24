@@ -1,0 +1,522 @@
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+  <meta content="yes" name="mobile-web-app-capable">
+  <meta content="noindex,nofollow" name="robots">
+  <meta content="IE=edge" http-equiv="X-UA-Compatible">
+  <meta content="no-referrer" name="referrer">
+
+
+  <link href="/assets/img/favicon.png" rel="icon" type="image/png">
+  <link href="/assets/img/touch-icon-iphone.png" rel="apple-touch-icon">
+  <link href="/assets/img/touch-icon-ipad.png" rel="apple-touch-icon" sizes="72x72">
+  <link href="/assets/img/touch-icon-iphone-retina.png" rel="apple-touch-icon" sizes="114x114">
+  <link href="/assets/img/touch-icon-ipad-retina.png" rel="apple-touch-icon" sizes="144x144">
+
+  <title>
+    Test 2 &gt; Edit columns </title>
+
+</head>
+<body data-js-date-format="mm/dd/yy" data-js-time-format="HH:mm"
+      data-keyboard-shortcut-url="/?controller=DocumentationController&amp;action=shortcuts" data-login-url="/login"
+      data-status-url="/?controller=UserAjaxController&amp;action=status" data-timezone="UTC">
+
+
+<header>
+  <div class="title-container">
+    <h1>
+    <span class="logo">
+        <a class="" href="/dashboard" title="Dashboard">K<span>B</span></a>    </span>
+      <span class="title">
+                    Test 2 &gt; Edit columns                        </span>
+    </h1>
+  </div>
+  <div class="board-selector-container">
+  </div>
+  <div class="menus-container">
+        <span class="notification">
+    <a class="js-modal-medium" href="/?controller=WebNotificationController&amp;action=show&amp;user_id=1"
+       title="My notifications"><i aria-hidden="true" class="fa fa-bell fa-fw js-modal-medium"></i></a></span>
+    &nbsp;
+    <div class="dropdown header-creation-menu">
+      <a class="dropdown-menu dropdown-menu-link-icon" href="#"><i class="fa fa-plus fa-fw"></i><i
+        class="fa fa-caret-down"></i></a>
+      <ul>
+        <li>
+          <a class="js-modal-medium" href="/project/create" title=""><i aria-hidden="true"
+                                                                        class="fa fa-plus fa-fw js-modal-medium"></i>New
+            project</a></li>
+        <li>
+          <a class="js-modal-medium" href="/project/create/private" title=""><i aria-hidden="true"
+                                                                                class="fa fa-lock fa-fw js-modal-medium"></i>New
+            personal
+            project</a></li>
+      </ul>
+    </div>
+    &nbsp;<div class="dropdown">
+    <a class="dropdown-menu dropdown-menu-link-icon" href="#">
+      <div class="avatar avatar-20 avatar-inline">
+        <div class="avatar-letter" title="admin">A</div>
+      </div>
+      <i class="fa fa-caret-down"></i></a>
+    <ul>
+      <li class="no-hover"><strong>admin</strong></li>
+      <li>
+        <a class="" href="/dashboard/1" title=""><i aria-hidden="true" class="fa fa-fw fa-tachometer"></i>My
+          dashboard</a></li>
+      <li>
+        <a class="" href="/user/show/1" title=""><i aria-hidden="true" class="fa fa-fw fa-home"></i>My profile</a></li>
+      <li>
+        <a class="" href="/projects" title=""><i aria-hidden="true" class="fa fa-fw fa-folder"></i>Projects
+          management</a></li>
+      <li>
+        <a class="" href="/users" title=""><i aria-hidden="true" class="fa fa-fw fa-user"></i>Users management</a></li>
+      <li>
+        <a class="" href="/groups" title=""><i aria-hidden="true" class="fa fa-fw fa-group"></i>Groups management</a>
+      </li>
+      <li>
+        <a class="" href="/extensions" title=""><i aria-hidden="true" class="fa fa-fw fa-cubes"></i>Plugins</a></li>
+      <li>
+        <a class="" href="/settings" title=""><i aria-hidden="true" class="fa fa-fw fa-cog"></i>Settings</a></li>
+
+
+      <li>
+        <i aria-hidden="true" class="fa fa-fw fa-life-ring"></i>
+        <a href="https://docs.kanboard.org/en/1.2.15
+/user_guide/index.html" target="_blank">Documentation</a></li>
+      <li>
+        <a class="" href="/logout" title=""><i aria-hidden="true" class="fa fa-fw fa-sign-out"></i>Logout</a></li>
+    </ul>
+  </div>
+  </div>
+</header>
+<section class="page">
+  <section id="main">
+    <div class="project-header">
+
+      <div class="dropdown-component">
+        <div class="dropdown">
+          <a class="dropdown-menu action-menu" href="#" title="Configure this project"><i class="fa fa-cog"></i><i
+            class="fa fa-caret-down"></i></a>
+          <ul>
+
+            <li>
+              <a class="js-modal-large" href="/?controller=TaskCreationController&amp;action=show&amp;project_id=1"
+                 title=""><i aria-hidden="true" class="fa fa-plus fa-fw js-modal-large"></i>Add a new task</a></li>
+
+            <li>
+              <a class="js-modal-medium" href="/project/1/activity" title=""><i
+                aria-hidden="true" class="fa fa-dashboard fa-fw js-modal-medium"></i>Activity</a></li>
+
+            <li>
+              <a class="js-modal-medium" href="/?controller=CustomFilterController&amp;action=create&amp;project_id=1"
+                 title=""><i aria-hidden="true" class="fa fa-filter fa-fw js-modal-medium"></i>Add custom filters</a>
+            </li>
+
+
+            <li>
+              <a class="js-modal-large" href="/analytics/tasks/1" title=""><i
+                aria-hidden="true" class="fa fa-line-chart fa-fw js-modal-large"></i>Analytics</a></li>
+
+            <li>
+              <a class="js-modal-medium" href="/export/tasks/1" title=""><i aria-hidden="true"
+                                                                            class="fa fa-upload fa-fw js-modal-medium"></i>Exports</a>
+            </li>
+
+            <li>
+              <a class="js-modal-medium" href="/project/1/import" title=""><i
+                aria-hidden="true" class="fa fa-download fa-fw js-modal-medium"></i>Import tasks</a></li>
+
+            <li>
+              <a class="" href="/project/1" title=""><i aria-hidden="true" class="fa fa-fw fa-cog"></i>Configure this
+                project</a></li>
+
+            <li>
+              <a class="" href="/projects" title=""><i aria-hidden="true" class="fa fa-fw fa-folder"></i>Manage projects</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="views-switcher-component">
+        <ul class="views">
+
+
+          <li>
+            <a class="view-overview"
+               href="/?controller=ProjectOverviewController&amp;action=show&amp;project_id=1&amp;search=status%3Aopen"
+               title="Keyboard shortcut: &quot;v o&quot;"><i aria-hidden="true"
+                                                             class="fa fa-fw fa-eye"></i>Overview</a>
+          </li>
+
+
+          <li>
+            <a class="view-board"
+               href="/?controller=BoardViewController&amp;action=show&amp;project_id=1&amp;search=status%3Aopen"
+               title="Keyboard shortcut: &quot;v b&quot;"><i aria-hidden="true"
+                                                             class="fa fa-fw fa-th"></i>Board</a></li>
+
+
+          <li>
+            <a class="view-listing"
+               href="/?controller=TaskListController&amp;action=show&amp;project_id=1&amp;search=status%3Aopen"
+               title="Keyboard shortcut: &quot;v l&quot;"><i aria-hidden="true"
+                                                             class="fa fa-fw fa-list"></i>List</a></li>
+
+        </ul>
+      </div>
+      <div class="filter-box-component">
+        <div class="filter-box">
+          <form action="/" class="search" method="get">
+            <input id="form-controller" name="controller" type="hidden" value="TaskListController"> <input
+            id="form-action"
+            name="action"
+            type="hidden"
+            value="show">
+            <input id="form-plugin" name="plugin" type="hidden" value=""> <input id="form-project_id" name="project_id"
+                                                                                 type="hidden" value="1">
+            <div class="input-addon">
+              <input class="input-addon-field" id="form-search" name="search" placeholder="Filter" type="text"
+                     value="status:open">
+              <div class="input-addon-item">
+                <div class="dropdown">
+                  <a class="dropdown-menu dropdown-menu-link-icon" href="#" title="Default filters"><i
+                    class="fa fa-filter fa-fw"></i><i class="fa fa-caret-down"></i></a>
+                  <ul>
+                    <li><a class="filter-helper filter-reset" data-filter="status:open" href="#"
+                           title="Keyboard shortcut: &quot;r&quot;">Reset filters</a></li>
+                    <li><a class="filter-helper" data-filter="status:open assignee:me" href="#">My tasks</a></li>
+                    <li><a class="filter-helper" data-filter="status:open assignee:me due:tomorrow" href="#">My tasks
+                      due tomorrow</a></li>
+                    <li><a class="filter-helper" data-filter="status:open due:today" href="#">Tasks due today</a></li>
+                    <li><a class="filter-helper" data-filter="status:open due:tomorrow" href="#">Tasks due tomorrow</a>
+                    </li>
+                    <li><a class="filter-helper" data-filter="status:open due:yesterday" href="#">Tasks due
+                      yesterday</a></li>
+                    <li><a class="filter-helper" data-filter="status:closed" href="#">Closed tasks</a></li>
+                    <li><a class="filter-helper" data-filter="status:open" href="#">Open tasks</a></li>
+                    <li><a class="filter-helper" data-filter="status:open assignee:nobody" href="#">Not assigned</a>
+                    </li>
+                    <li><a class="filter-helper" data-filter="status:open assignee:anybody" href="#">Assigned</a></li>
+                    <li><a class="filter-helper" data-filter="status:open category:none" href="#">No category</a></li>
+                    <li>
+                      <a href="https://docs.kanboard.org/en/1.2.15
+/user_guide/search.html" target="_blank">View advanced search syntax</a></li>
+                  </ul>
+                </div>
+              </div>
+
+
+              <div class="input-addon-item">
+                <div class="dropdown">
+                  <a class="dropdown-menu dropdown-menu-link-icon" href="#" title="User filters"><i
+                    class="fa fa-user fa-fw"></i> <i class="fa fa-caret-down"></i></a>
+                  <ul>
+                    <li><a class="filter-helper" data-unique-filter="assignee:nobody" href="#">Not assigned</a></li>
+                    <li><a class="filter-helper" data-unique-filter="assignee:anybody" href="#">Assigned</a></li>
+                    <li><a class="filter-helper" data-unique-filter="assignee:&quot;admin&quot;" href="#">admin</a></li>
+                  </ul>
+                </div>
+              </div>
+
+            </div>
+
+          </form>
+        </div>
+      </div>
+
+    </div>
+    <section class="sidebar-container">
+
+      <div class="sidebar">
+        <ul>
+          <li>
+            <a class="" href="/project/1" title="">Summary</a></li>
+          <li>
+            <a class="" href="/project/1/customer-filters" title="">Custom filters</a></li>
+
+          <li>
+            <a class="" href="/project/1/edit" title="">Edit project</a></li>
+          <li>
+            <a class="" href="/?controller=ProjectPredefinedContentController&amp;action=show&amp;project_id=1"
+               title="">Predefined contents</a></li>
+          <li>
+            <a class="" href="/project/1/share" title="">Public access</a></li>
+          <li>
+            <a class="" href="/project/1/notifications" title="">Notifications</a></li>
+          <li>
+            <a class="" href="/project/1/integrations" title="">Integrations</a></li>
+          <li class="active">
+            <a class="" href="/project/1/columns" title="">Columns</a></li>
+          <li>
+            <a class="" href="/project/1/swimlanes" title="">Swimlanes</a></li>
+          <li>
+            <a class="" href="/project/1/categories" title="">Categories</a></li>
+          <li>
+            <a class="" href="/project/1/tags" title="">Tags</a></li>
+          <li>
+            <a class="" href="/project/1/permissions" title="">Permissions</a></li>
+          <li>
+            <a class="" href="/?controller=ProjectRoleController&amp;action=show&amp;project_id=1" title="">Custom
+              roles</a></li>
+          <li>
+            <a class="" href="/project/1/actions" title="">Automatic actions</a></li>
+          <li>
+            <a class="" href="/project/1/duplicate" title="">Duplicate</a></li>
+          <li>
+            <a class="js-modal-confirm"
+               href="/?controller=ProjectStatusController&amp;action=confirmDisable&amp;project_id=1" title="">Close
+              this project</a></li>
+          <li>
+            <a class="js-modal-confirm"
+               href="/?controller=ProjectStatusController&amp;action=confirmRemove&amp;project_id=1" title="">Remove</a>
+          </li>
+
+        </ul>
+      </div>
+
+      <div class="sidebar-content">
+        <div class="page-header">
+          <h2>Edit the board for "Test 2"</h2>
+          <ul>
+            <li>
+              <a class="js-modal-medium" href="/?controller=ColumnController&amp;action=create&amp;project_id=1"
+                 title=""><i aria-hidden="true" class="fa fa-plus fa-fw js-modal-medium"></i>Add a new column</a></li>
+          </ul>
+        </div>
+
+        <table class="columns-table table-striped"
+               data-save-position-url="/?controller=ColumnController&amp;action=move&amp;project_id=1">
+          <thead>
+          <tr>
+            <th>Column</th>
+            <th class="column-10">Task limit</th>
+            <th class="column-15">Visible on dashboard</th>
+            <th class="column-12">Open tasks</th>
+            <th class="column-12">Closed tasks</th>
+          </tr>
+          </thead>
+          <tbody class="ui-sortable">
+          <tr data-column-id="1">
+            <td>
+              <i class="fa fa-arrows-alt draggable-row-handle ui-sortable-handle" title="Change column position"></i>&nbsp;
+              <div class="dropdown">
+                <a class="dropdown-menu dropdown-menu-link-icon" href="#"><i class="fa fa-cog ui-sortable-handle"></i><i
+                  class="fa fa-caret-down ui-sortable-handle"></i></a>
+                <ul>
+                  <li>
+                    <a class="js-modal-medium"
+                       href="/?controller=ColumnController&amp;action=edit&amp;project_id=1&amp;column_id=1" title=""><i
+                      aria-hidden="true"
+                      class="fa fa-edit fa-fw js-modal-medium ui-sortable-handle"></i>Edit</a></li>
+                </ul>
+              </div>
+              Backlog
+            </td>
+            <td>
+              ∞
+            </td>
+            <td>
+              Yes
+            </td>
+            <td>
+              1
+            </td>
+            <td>
+              0
+            </td>
+          </tr>
+          <tr data-column-id="2">
+            <td>
+              <i class="fa fa-arrows-alt draggable-row-handle ui-sortable-handle" title="Change column position"></i>&nbsp;
+              <div class="dropdown">
+                <a class="dropdown-menu dropdown-menu-link-icon" href="#"><i class="fa fa-cog ui-sortable-handle"></i><i
+                  class="fa fa-caret-down ui-sortable-handle"></i></a>
+                <ul>
+                  <li>
+                    <a class="js-modal-medium"
+                       href="/?controller=ColumnController&amp;action=edit&amp;project_id=1&amp;column_id=2" title=""><i
+                      aria-hidden="true"
+                      class="fa fa-edit fa-fw js-modal-medium ui-sortable-handle"></i>Edit</a></li>
+                  <li>
+                    <a class="js-modal-confirm"
+                       href="/?controller=ColumnController&amp;action=confirm&amp;project_id=1&amp;column_id=2"
+                       title=""><i
+                      aria-hidden="true" class="fa fa-trash-o fa-fw js-modal-confirm ui-sortable-handle"></i>Remove</a>
+                  </li>
+                </ul>
+              </div>
+              Ready
+            </td>
+            <td>
+              ∞
+            </td>
+            <td>
+              Yes
+            </td>
+            <td>
+              0
+            </td>
+            <td>
+              0
+            </td>
+          </tr>
+          <tr data-column-id="3">
+            <td>
+              <i class="fa fa-arrows-alt draggable-row-handle ui-sortable-handle" title="Change column position"></i>&nbsp;
+              <div class="dropdown">
+                <a class="dropdown-menu dropdown-menu-link-icon" href="#"><i class="fa fa-cog ui-sortable-handle"></i><i
+                  class="fa fa-caret-down ui-sortable-handle"></i></a>
+                <ul>
+                  <li>
+                    <a class="js-modal-medium"
+                       href="/?controller=ColumnController&amp;action=edit&amp;project_id=1&amp;column_id=3" title=""><i
+                      aria-hidden="true"
+                      class="fa fa-edit fa-fw js-modal-medium ui-sortable-handle"></i>Edit</a></li>
+                  <li>
+                    <a class="js-modal-confirm"
+                       href="/?controller=ColumnController&amp;action=confirm&amp;project_id=1&amp;column_id=3"
+                       title=""><i
+                      aria-hidden="true" class="fa fa-trash-o fa-fw js-modal-confirm ui-sortable-handle"></i>Remove</a>
+                  </li>
+                </ul>
+              </div>
+              Work in progress
+            </td>
+            <td>
+              ∞
+            </td>
+            <td>
+              Yes
+            </td>
+            <td>
+              0
+            </td>
+            <td>
+              0
+            </td>
+          </tr>
+          <tr data-column-id="4">
+            <td>
+              <i class="fa fa-arrows-alt draggable-row-handle ui-sortable-handle" title="Change column position"></i>&nbsp;
+              <div class="dropdown">
+                <a class="dropdown-menu dropdown-menu-link-icon" href="#"><i class="fa fa-cog ui-sortable-handle"></i><i
+                  class="fa fa-caret-down ui-sortable-handle"></i></a>
+                <ul>
+                  <li>
+                    <a class="js-modal-medium"
+                       href="/?controller=ColumnController&amp;action=edit&amp;project_id=1&amp;column_id=4" title=""><i
+                      aria-hidden="true"
+                      class="fa fa-edit fa-fw js-modal-medium ui-sortable-handle"></i>Edit</a></li>
+                  <li>
+                    <a class="js-modal-confirm"
+                       href="/?controller=ColumnController&amp;action=confirm&amp;project_id=1&amp;column_id=4"
+                       title=""><i
+                      aria-hidden="true" class="fa fa-trash-o fa-fw js-modal-confirm ui-sortable-handle"></i>Remove</a>
+                  </li>
+                </ul>
+              </div>
+              Done
+            </td>
+            <td>
+              ∞
+            </td>
+            <td>
+              Yes
+            </td>
+            <td>
+              0
+            </td>
+            <td>
+              0
+            </td>
+          </tr>
+          <tr data-column-id="5">
+            <td>
+              <i class="fa fa-arrows-alt draggable-row-handle ui-sortable-handle" title="Change column position"></i>&nbsp;
+              <div class="dropdown">
+                <a class="dropdown-menu dropdown-menu-link-icon" href="#"><i class="fa fa-cog ui-sortable-handle"></i><i
+                  class="fa fa-caret-down ui-sortable-handle"></i></a>
+                <ul>
+                  <li>
+                    <a class="js-modal-medium"
+                       href="/?controller=ColumnController&amp;action=edit&amp;project_id=1&amp;column_id=5" title=""><i
+                      aria-hidden="true"
+                      class="fa fa-edit fa-fw js-modal-medium ui-sortable-handle"></i>Edit</a></li>
+                  <li>
+                    <a class="js-modal-confirm"
+                       href="/?controller=ColumnController&amp;action=confirm&amp;project_id=1&amp;column_id=5"
+                       title=""><i
+                      aria-hidden="true" class="fa fa-trash-o fa-fw js-modal-confirm ui-sortable-handle"></i>Remove</a>
+                  </li>
+                </ul>
+              </div>
+              New Column 3
+            </td>
+            <td>
+              ∞
+            </td>
+            <td>
+              Yes
+            </td>
+            <td>
+              0
+            </td>
+            <td>
+              0
+            </td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </section>
+</section>
+
+
+<div id="modal-overlay">
+  <div id="modal-box">
+    <div id="modal-header"><a href="#" id="modal-close-button"><i class="fa fa-times"></i></a></div>
+    <div id="modal-content">
+      <div class="page-header">
+        <h2>Add a new column</h2>
+      </div>
+      <form action="/?controller=ColumnController&amp;action=save&amp;project_id=1" autocomplete="off" method="post">
+        <input name="csrf_token" type="hidden" value="98365ad8024474b6f47abff05248e00dcf27ac4ebd48d0db95ae0cc5a174">
+        <label for="form-title">Title</label> <input autofocus="" class="" id="form-title" maxlength="191" name="title"
+                                                     required="" tabindex="1" type="text"><span
+        class="form-required">*</span>
+        <label for="form-task_limit">Task limit</label> <input class="" id="form-task_limit" name="task_limit"
+                                                               tabindex="2" type="number">
+        <label><input class="" name="hide_in_dashboard" tabindex="3" type="checkbox" value="1">&nbsp;Hide tasks in this
+          column in the dashboard</label>
+        <label for="form-description">Description</label>
+        <div class="js-text-editor-rendered"
+             data-params="{&quot;name&quot;:&quot;description&quot;,&quot;css&quot;:&quot;&quot;,&quot;required&quot;:false,&quot;tabindex&quot;:4,&quot;labelPreview&quot;:&quot;Preview&quot;,&quot;previewUrl&quot;:&quot;\/?controller=TaskAjaxController&amp;action=preview&quot;,&quot;labelWrite&quot;:&quot;Write&quot;,&quot;labelTitle&quot;:&quot;Title&quot;,&quot;placeholder&quot;:&quot;Write your text in Markdown&quot;,&quot;autofocus&quot;:false,&quot;suggestOptions&quot;:{&quot;triggers&quot;:{&quot;#&quot;:&quot;\/?controller=TaskAjaxController&amp;action=suggest&amp;search=SEARCH_TERM&quot;,&quot;@&quot;:&quot;\/?controller=UserAjaxController&amp;action=mention&amp;project_id=1&amp;search=SEARCH_TERM&quot;}}}">
+
+          <div class="text-editor">
+            <div class="text-editor-view-mode">
+              <div class="text-editor-toolbar"><a href="#"><i class="fa fa-pencil-square-o fa-fw"></i> Write</a></div>
+              <div class="text-editor-preview-area markdown"></div>
+            </div>
+            <div class="text-editor-write-mode">
+              <div class="text-editor-toolbar"><a href="#"><i class="fa fa-eye fa-fw"></i> Preview</a><a href="#"><i
+                class="fa fa-bold fa-fw"></i></a><a href="#"><i class="fa fa-italic fa-fw"></i></a><a href="#"><i
+                class="fa fa-strikethrough fa-fw"></i></a><a href="#"><i class="fa fa-link fa-fw"></i></a><a href="#"><i
+                class="fa fa-quote-right fa-fw"></i></a><a href="#"><i class="fa fa-list-ul fa-fw"></i></a><a
+                href="#"><i class="fa fa-code fa-fw"></i></a></div>
+              <textarea name="description" placeholder="Write your text in Markdown" tabindex="4"></textarea></div>
+          </div>
+        </div>
+        <div class="js-submit-buttons-rendered"
+             data-params="{&quot;submitLabel&quot;:&quot;Save&quot;,&quot;orLabel&quot;:&quot;or&quot;,&quot;cancelLabel&quot;:&quot;cancel&quot;,&quot;color&quot;:&quot;blue&quot;,&quot;tabindex&quot;:null,&quot;disabled&quot;:false}">
+          <div class="form-actions">
+            <button class="btn btn-blue" disabled="" type="submit"><i class="fa fa-spinner fa-pulse"></i> Save</button>
+            or <a href="#">cancel</a></div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+</body>
+</html>

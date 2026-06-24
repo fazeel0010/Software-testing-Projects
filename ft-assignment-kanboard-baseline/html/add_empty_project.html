@@ -1,0 +1,342 @@
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+  <meta content="yes" name="mobile-web-app-capable">
+  <meta content="noindex,nofollow" name="robots">
+  <meta content="IE=edge" http-equiv="X-UA-Compatible">
+  <meta content="no-referrer" name="referrer">
+
+
+  <link href="/assets/img/favicon.png" rel="icon" type="image/png">
+  <link href="/assets/img/touch-icon-iphone.png" rel="apple-touch-icon">
+  <link href="/assets/img/touch-icon-ipad.png" rel="apple-touch-icon" sizes="72x72">
+  <link href="/assets/img/touch-icon-iphone-retina.png" rel="apple-touch-icon" sizes="114x114">
+  <link href="/assets/img/touch-icon-ipad-retina.png" rel="apple-touch-icon" sizes="144x144">
+
+  <title>
+    Dashboard for admin </title>
+
+</head>
+<body data-js-date-format="mm/dd/yy" data-js-time-format="HH:mm"
+      data-keyboard-shortcut-url="/?controller=DocumentationController&amp;action=shortcuts" data-login-url="/login"
+      data-status-url="/?controller=UserAjaxController&amp;action=status" data-timezone="UTC">
+
+
+<header>
+  <div class="title-container">
+    <h1>
+    <span class="logo">
+        <a class="" href="/dashboard" title="Dashboard">K<span>B</span></a>    </span>
+      <span class="title">
+                    Dashboard for admin                        </span>
+    </h1>
+  </div>
+  <div class="board-selector-container">
+    <div class="js-select-dropdown-autocomplete-rendered"
+         data-params="{&quot;name&quot;:&quot;boardId&quot;,&quot;placeholder&quot;:&quot;Display another project&quot;,&quot;items&quot;:{&quot;1&quot;:&quot;Test 2&quot;},&quot;redirect&quot;:{&quot;regex&quot;:&quot;PROJECT_ID&quot;,&quot;url&quot;:&quot;\/board\/PROJECT_ID&quot;},&quot;onFocus&quot;:[&quot;board.selector.open&quot;]}">
+      <div class="select-dropdown-input-container"><input name="boardId" type="hidden" value=""><input
+        class="select-dropdown-input"
+        placeholder="Display another project"
+        type="text"><i
+        class="fa fa-chevron-down select-dropdown-chevron"></i><span class="select-loading-icon"><i
+        class="fa fa-spinner fa-pulse"></i></span></div>
+    </div>
+  </div>
+  <div class="menus-container">
+        <span class="notification">
+    <a class="js-modal-medium" href="/?controller=WebNotificationController&amp;action=show&amp;user_id=1"
+       title="My notifications"><i aria-hidden="true" class="fa fa-bell fa-fw js-modal-medium"></i></a></span>
+    &nbsp;
+    <div class="dropdown header-creation-menu">
+      <a class="dropdown-menu dropdown-menu-link-icon" href="#"><i class="fa fa-plus fa-fw"></i><i
+        class="fa fa-caret-down"></i></a>
+      <ul>
+        <li>
+          <a class="js-modal-medium" href="/project/create" title=""><i aria-hidden="true"
+                                                                        class="fa fa-plus fa-fw js-modal-medium"></i>New
+            project</a></li>
+        <li>
+          <a class="js-modal-medium" href="/project/create/private" title=""><i aria-hidden="true"
+                                                                                class="fa fa-lock fa-fw js-modal-medium"></i>New
+            personal
+            project</a></li>
+      </ul>
+    </div>
+    &nbsp;<div class="dropdown">
+    <a class="dropdown-menu dropdown-menu-link-icon" href="#">
+      <div class="avatar avatar-20 avatar-inline">
+        <div class="avatar-letter" title="admin">A</div>
+      </div>
+      <i class="fa fa-caret-down"></i></a>
+    <ul>
+      <li class="no-hover"><strong>admin</strong></li>
+      <li>
+        <a class="" href="/dashboard/1" title=""><i aria-hidden="true" class="fa fa-fw fa-tachometer"></i>My
+          dashboard</a></li>
+      <li>
+        <a class="" href="/user/show/1" title=""><i aria-hidden="true" class="fa fa-fw fa-home"></i>My profile</a></li>
+      <li>
+        <a class="" href="/projects" title=""><i aria-hidden="true" class="fa fa-fw fa-folder"></i>Projects
+          management</a></li>
+      <li>
+        <a class="" href="/users" title=""><i aria-hidden="true" class="fa fa-fw fa-user"></i>Users management</a></li>
+      <li>
+        <a class="" href="/groups" title=""><i aria-hidden="true" class="fa fa-fw fa-group"></i>Groups management</a>
+      </li>
+      <li>
+        <a class="" href="/extensions" title=""><i aria-hidden="true" class="fa fa-fw fa-cubes"></i>Plugins</a></li>
+      <li>
+        <a class="" href="/settings" title=""><i aria-hidden="true" class="fa fa-fw fa-cog"></i>Settings</a></li>
+
+
+      <li>
+        <i aria-hidden="true" class="fa fa-fw fa-life-ring"></i>
+        <a href="https://docs.kanboard.org/en/1.2.15
+/user_guide/index.html" target="_blank">Documentation</a></li>
+      <li>
+        <a class="" href="/logout" title=""><i aria-hidden="true" class="fa fa-fw fa-sign-out"></i>Logout</a></li>
+    </ul>
+  </div>
+  </div>
+</header>
+<section class="page">
+  <section id="main">
+    <div class="page-header">
+      <ul>
+        <li>
+          <a class="js-modal-medium" href="/project/create" title=""><i aria-hidden="true"
+                                                                        class="fa fa-plus fa-fw js-modal-medium"></i>New
+            project</a></li>
+        <li>
+          <a class="js-modal-medium" href="/project/create/private" title=""><i aria-hidden="true"
+                                                                                class="fa fa-lock fa-fw js-modal-medium"></i>New
+            personal
+            project</a></li>
+        <li>
+          <a class="" href="/projects" title=""><i aria-hidden="true" class="fa fa-fw fa-folder"></i>Project management</a>
+        </li>
+        <li>
+          <a class="js-modal-medium" href="/?controller=ActivityController&amp;action=user" title=""><i
+            aria-hidden="true" class="fa fa-dashboard fa-fw js-modal-medium"></i>My activity stream</a></li>
+      </ul>
+    </div>
+    <section class="sidebar-container" id="dashboard">
+      <div class="sidebar">
+        <ul>
+          <li class="active">
+            <a class="" href="/dashboard/1" title="">Overview</a></li>
+          <li>
+            <a class="" href="/dashboard/1/projects" title="">My projects</a></li>
+          <li>
+            <a class="" href="/dashboard/1/tasks" title="">My tasks</a></li>
+          <li>
+            <a class="" href="/dashboard/1/subtasks" title="">My subtasks</a></li>
+        </ul>
+      </div>
+      <div class="sidebar-content">
+
+        <div class="filter-box margin-bottom">
+          <form action="/" class="search" method="get">
+            <input id="form-controller" name="controller" type="hidden" value="SearchController"> <input
+            id="form-action"
+            name="action"
+            type="hidden"
+            value="index">
+            <div class="input-addon">
+              <input class="input-addon-field" id="form-search" name="search" placeholder="Search" type="text">
+              <div class="input-addon-item">
+                <div class="dropdown">
+                  <a class="dropdown-menu dropdown-menu-link-icon" href="#" title="Default filters"><i
+                    class="fa fa-filter fa-fw"></i><i class="fa fa-caret-down"></i></a>
+                  <ul>
+                    <li><a class="filter-helper filter-reset" data-filter="" href="#"
+                           title="Keyboard shortcut: &quot;r&quot;">Reset filters</a></li>
+                    <li><a class="filter-helper" data-filter="status:open assignee:me" href="#">My tasks</a></li>
+                    <li><a class="filter-helper" data-filter="status:open assignee:me due:tomorrow" href="#">My tasks
+                      due tomorrow</a></li>
+                    <li><a class="filter-helper" data-filter="status:open due:today" href="#">Tasks due today</a></li>
+                    <li><a class="filter-helper" data-filter="status:open due:tomorrow" href="#">Tasks due tomorrow</a>
+                    </li>
+                    <li><a class="filter-helper" data-filter="status:open due:yesterday" href="#">Tasks due
+                      yesterday</a></li>
+                    <li><a class="filter-helper" data-filter="status:closed" href="#">Closed tasks</a></li>
+                    <li><a class="filter-helper" data-filter="status:open" href="#">Open tasks</a></li>
+                    <li><a class="filter-helper" data-filter="status:open assignee:nobody" href="#">Not assigned</a>
+                    </li>
+                    <li><a class="filter-helper" data-filter="status:open assignee:anybody" href="#">Assigned</a></li>
+                    <li><a class="filter-helper" data-filter="status:open category:none" href="#">No category</a></li>
+                    <li>
+                      <a href="https://docs.kanboard.org/en/1.2.15
+/user_guide/search.html" target="_blank">View advanced search syntax</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+
+
+        <div class="table-list">
+          <div class="table-list-header">
+            <div class="table-list-header-count">
+              1 project
+            </div>
+            <div class="table-list-header-menu">
+              <div class="dropdown">
+                <a class="dropdown-menu dropdown-menu-link-icon" href="#"><strong>Sort <i class="fa fa-caret-down"></i></strong></a>
+                <ul>
+                  <li>
+                    <a
+                      class="js-modal-replace"
+                      href="/?controller=DashboardController&amp;action=show&amp;pagination=projects&amp;user_id=1&amp;page=1&amp;order=projects.id&amp;direction=ASC"
+                      title="">Project ID</a></li>
+                  <li>
+                    ▲ <a
+                    class="js-modal-replace"
+                    href="/?controller=DashboardController&amp;action=show&amp;pagination=projects&amp;user_id=1&amp;page=1&amp;order=projects.name&amp;direction=DESC"
+                    title="">Project name</a></li>
+                  <li>
+                    <a
+                      class="js-modal-replace"
+                      href="/?controller=DashboardController&amp;action=show&amp;pagination=projects&amp;user_id=1&amp;page=1&amp;order=projects.is_active&amp;direction=ASC"
+                      title="">Status</a></li>
+                  <li>
+                    <a
+                      class="js-modal-replace"
+                      href="/?controller=DashboardController&amp;action=show&amp;pagination=projects&amp;user_id=1&amp;page=1&amp;order=projects.start_date&amp;direction=ASC"
+                      title="">Start date</a></li>
+                  <li>
+                    <a
+                      class="js-modal-replace"
+                      href="/?controller=DashboardController&amp;action=show&amp;pagination=projects&amp;user_id=1&amp;page=1&amp;order=projects.end_date&amp;direction=ASC"
+                      title="">End date</a></li>
+                  <li>
+                    <a
+                      class="js-modal-replace"
+                      href="/?controller=DashboardController&amp;action=show&amp;pagination=projects&amp;user_id=1&amp;page=1&amp;order=projects.is_public&amp;direction=ASC"
+                      title="">Public</a></li>
+                  <li>
+                    <a
+                      class="js-modal-replace"
+                      href="/?controller=DashboardController&amp;action=show&amp;pagination=projects&amp;user_id=1&amp;page=1&amp;order=projects.is_private&amp;direction=ASC"
+                      title="">Personal</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="table-list-row table-border-left">
+            <div>
+              <div class="dropdown">
+                <a class="dropdown-menu dropdown-menu-link-icon" href="#"><strong>#1 <i
+                  class="fa fa-caret-down"></i></strong></a>
+                <ul>
+                  <li>
+                    <a class="" href="/board/1" title=""><i aria-hidden="true" class="fa fa-fw fa-th"></i>Board</a></li>
+                  <li>
+                    <a class="" href="/list/1" title=""><i aria-hidden="true" class="fa fa-fw fa-list"></i>Listing</a>
+                  </li>
+                  <li>
+                    <a class="js-modal-medium" href="/project/1/activity" title=""><i
+                      aria-hidden="true" class="fa fa-dashboard fa-fw js-modal-medium"></i>Activity</a></li>
+
+                  <li>
+                    <a class="js-modal-large" href="/analytics/tasks/1" title=""><i
+                      aria-hidden="true" class="fa fa-line-chart fa-fw js-modal-large"></i>Analytics</a></li>
+
+
+                  <li>
+                    <a class="" href="/project/1" title=""><i aria-hidden="true" class="fa fa-fw fa-cog"></i>Configure
+                      this project</a></li>
+                </ul>
+              </div>
+
+
+              <span class="table-list-title ">
+                        <a class="" href="/board/1" title="">Test 2</a>                    </span>
+
+
+            </div>
+            <div class="table-list-details">
+              <strong title="Task count">0</strong>
+              <small>Backlog</small>
+              <strong title="Task count">0</strong>
+              <small>Ready</small>
+              <strong title="Task count">0</strong>
+              <small>Work in progress</small>
+              <strong title="Task count">0</strong>
+              <small>Done</small>
+            </div>
+          </div>
+        </div>
+
+
+        <p class="alert">There is nothing assigned to you.</p>
+
+      </div>
+    </section>
+  </section>
+</section>
+
+
+<div id="modal-overlay">
+  <div id="modal-box">
+    <div id="modal-header"><a href="#" id="modal-close-button"><i class="fa fa-times"></i></a></div>
+    <div id="modal-content">
+      <section id="main">
+        <div class="page-header">
+          <h2>New project</h2>
+        </div>
+        <form action="/?controller=ProjectCreationController&amp;action=save" autocomplete="off"
+              id="project-creation-form"
+              method="post">
+
+          <input name="csrf_token" type="hidden" value="63d51340ca09ad77b35d7ab16bfbd18d263e2191e94a0c2c9074d8b94580">
+          <input id="form-is_private" name="is_private" type="hidden">
+          <label for="form-name">Name</label> <input autofocus="" class="" id="form-name" name="name" required=""
+                                                     type="text"><span class="form-required">*</span>
+          <label for="form-identifier">Identifier</label> <input autofocus="" class="" id="form-identifier"
+                                                                 name="identifier" type="text">
+          <p class="form-help">The project identifier is optional and must be alphanumeric, example: MYPROJECT.</p>
+
+          <label><input class="" name="per_swimlane_task_limits" type="checkbox" value="1">&nbsp;Column task limits
+            apply to each swimlane individually</label>
+          <label for="form-task_limit">Task limit</label> <input class="" id="form-task_limit" name="task_limit"
+                                                                 type="number">
+          <label for="form-src_project_id">Create from another project</label> <select
+          class="js-project-creation-select-options"
+          id="form-src_project_id"
+          name="src_project_id">
+          <option value="0">Do not duplicate anything</option>
+          <option value="1">Test 2</option>
+        </select>
+          <div class="js-project-creation-options">
+            <p class="alert">Which parts of the project do you want to duplicate?</p>
+
+            <label><input checked="checked" class="" name="projectPermissionModel" type="checkbox" value="1">&nbsp;Permissions</label>
+            <label><input checked="checked" class="" name="projectRoleModel" type="checkbox" value="1">&nbsp;Custom
+              roles</label>
+            <label><input checked="checked" class="" name="categoryModel" type="checkbox"
+                          value="1">&nbsp;Categories</label> <label><input checked="checked"
+                                                                           class="" name="tagDuplicationModel"
+                                                                           type="checkbox" value="1">&nbsp;Tags</label>
+            <label><input checked="checked" class="" name="actionModel" type="checkbox" value="1">&nbsp;Actions</label>
+            <label><input checked="checked" class="" name="customFilterModel" type="checkbox" value="1">&nbsp;Custom
+              filters</label> <label><input class="" name="projectMetadataModel" type="checkbox" value="1">&nbsp;Metadata</label>
+            <label><input class="" name="projectTaskDuplicationModel" type="checkbox" value="1">&nbsp;Tasks</label>
+          </div>
+
+          <div class="js-submit-buttons-rendered"
+               data-params="{&quot;submitLabel&quot;:&quot;Save&quot;,&quot;orLabel&quot;:&quot;or&quot;,&quot;cancelLabel&quot;:&quot;cancel&quot;,&quot;color&quot;:&quot;blue&quot;,&quot;tabindex&quot;:null,&quot;disabled&quot;:false}">
+            <div class="form-actions">
+              <button class="btn btn-blue" disabled="" type="submit"><i class="fa fa-spinner fa-pulse"></i> Save
+              </button>
+              or <a href="#">cancel</a></div>
+          </div>
+        </form>
+      </section>
+    </div>
+  </div>
+</div>
+</body>
+</html>

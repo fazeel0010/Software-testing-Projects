@@ -1,0 +1,10 @@
+{
+  "name": "dataleak-proxy",
+  "version": "1.0.0",
+  "description": "Filtering proxy/bridge for data leak prevention",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js"
+  },
+  "dependencies": {}
+}

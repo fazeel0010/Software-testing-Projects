@@ -1,0 +1,385 @@
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+  <meta content="yes" name="mobile-web-app-capable">
+  <meta content="noindex,nofollow" name="robots">
+  <meta content="IE=edge" http-equiv="X-UA-Compatible">
+  <meta content="no-referrer" name="referrer">
+
+
+  <link href="/assets/img/favicon.png" rel="icon" type="image/png">
+  <link href="/assets/img/touch-icon-iphone.png" rel="apple-touch-icon">
+  <link href="/assets/img/touch-icon-ipad.png" rel="apple-touch-icon" sizes="72x72">
+  <link href="/assets/img/touch-icon-iphone-retina.png" rel="apple-touch-icon" sizes="114x114">
+  <link href="/assets/img/touch-icon-ipad-retina.png" rel="apple-touch-icon" sizes="144x144">
+
+  <title>
+    Users (2) </title>
+
+</head>
+<body data-js-date-format="mm/dd/yy" data-js-time-format="HH:mm"
+      data-keyboard-shortcut-url="/?controller=DocumentationController&amp;action=shortcuts" data-login-url="/login"
+      data-status-url="/?controller=UserAjaxController&amp;action=status" data-timezone="UTC">
+
+
+<header>
+  <div class="title-container">
+    <h1>
+    <span class="logo">
+        <a class="" href="/dashboard" title="Dashboard">K<span>B</span></a>    </span>
+      <span class="title">
+                    Users (2)                        </span>
+    </h1>
+  </div>
+  <div class="board-selector-container">
+    <div class="js-select-dropdown-autocomplete-rendered"
+         data-params="{&quot;name&quot;:&quot;boardId&quot;,&quot;placeholder&quot;:&quot;Display another project&quot;,&quot;items&quot;:{&quot;1&quot;:&quot;Test 2&quot;,&quot;2&quot;:&quot;Test private 2&quot;},&quot;redirect&quot;:{&quot;regex&quot;:&quot;PROJECT_ID&quot;,&quot;url&quot;:&quot;\/board\/PROJECT_ID&quot;},&quot;onFocus&quot;:[&quot;board.selector.open&quot;]}">
+      <div class="select-dropdown-input-container"><input name="boardId" type="hidden" value=""><input
+        class="select-dropdown-input"
+        placeholder="Display another project"
+        type="text"><i
+        class="fa fa-chevron-down select-dropdown-chevron"></i><span class="select-loading-icon"><i
+        class="fa fa-spinner fa-pulse"></i></span></div>
+    </div>
+  </div>
+  <div class="menus-container">
+        <span class="notification">
+    <a class="js-modal-medium" href="/?controller=WebNotificationController&amp;action=show&amp;user_id=1"
+       title="My notifications"><i aria-hidden="true" class="fa fa-bell fa-fw js-modal-medium"></i></a></span>
+    &nbsp;
+    <div class="dropdown header-creation-menu">
+      <a class="dropdown-menu dropdown-menu-link-icon" href="#"><i class="fa fa-plus fa-fw"></i><i
+        class="fa fa-caret-down"></i></a>
+      <ul>
+        <li>
+          <a class="js-modal-medium" href="/project/create" title=""><i aria-hidden="true"
+                                                                        class="fa fa-plus fa-fw js-modal-medium"></i>New
+            project</a></li>
+        <li>
+          <a class="js-modal-medium" href="/project/create/private" title=""><i aria-hidden="true"
+                                                                                class="fa fa-lock fa-fw js-modal-medium"></i>New
+            personal
+            project</a></li>
+      </ul>
+    </div>
+    &nbsp;<div class="dropdown">
+    <a class="dropdown-menu dropdown-menu-link-icon" href="#">
+      <div class="avatar avatar-20 avatar-inline">
+        <div class="avatar-letter" title="admin">A</div>
+      </div>
+      <i class="fa fa-caret-down"></i></a>
+    <ul>
+      <li class="no-hover"><strong>admin</strong></li>
+      <li>
+        <a class="" href="/dashboard/1" title=""><i aria-hidden="true" class="fa fa-fw fa-tachometer"></i>My
+          dashboard</a></li>
+      <li>
+        <a class="" href="/user/show/1" title=""><i aria-hidden="true" class="fa fa-fw fa-home"></i>My profile</a></li>
+      <li>
+        <a class="" href="/projects" title=""><i aria-hidden="true" class="fa fa-fw fa-folder"></i>Projects
+          management</a></li>
+      <li>
+        <a class="" href="/users" title=""><i aria-hidden="true" class="fa fa-fw fa-user"></i>Users management</a></li>
+      <li>
+        <a class="" href="/groups" title=""><i aria-hidden="true" class="fa fa-fw fa-group"></i>Groups management</a>
+      </li>
+      <li>
+        <a class="" href="/extensions" title=""><i aria-hidden="true" class="fa fa-fw fa-cubes"></i>Plugins</a></li>
+      <li>
+        <a class="" href="/settings" title=""><i aria-hidden="true" class="fa fa-fw fa-cog"></i>Settings</a></li>
+
+
+      <li>
+        <i aria-hidden="true" class="fa fa-fw fa-life-ring"></i>
+        <a href="https://docs.kanboard.org/en/1.2.15
+/user_guide/index.html" target="_blank">Documentation</a></li>
+      <li>
+        <a class="" href="/logout" title=""><i aria-hidden="true" class="fa fa-fw fa-sign-out"></i>Logout</a></li>
+    </ul>
+  </div>
+  </div>
+</header>
+<section class="page">
+  <div class="alert alert-success alert-fade-out">User removed successfully.</div>
+  <div class="page-header">
+    <ul>
+      <li>
+        <a class="js-modal-medium" href="/?controller=UserCreationController&amp;action=show" title=""><i
+          aria-hidden="true" class="fa fa-plus fa-fw js-modal-medium"></i>New user</a></li>
+      <li>
+        <a class="js-modal-medium" href="/?controller=UserInviteController&amp;action=show" title=""><i
+          aria-hidden="true" class="fa fa-paper-plane fa-fw js-modal-medium"></i>Invite people</a></li>
+      <li>
+        <a class="js-modal-medium" href="/?controller=UserImportController&amp;action=show" title=""><i
+          aria-hidden="true" class="fa fa-upload fa-fw js-modal-medium"></i>Import</a></li>
+      <li>
+        <a class="" href="/groups" title=""><i aria-hidden="true" class="fa fa-fw fa-users"></i>View all groups</a></li>
+    </ul>
+  </div>
+
+  <div class="margin-bottom">
+    <form action="/" class="search" method="get">
+      <input id="form-controller" name="controller" type="hidden" value="UserListController"> <input id="form-action"
+                                                                                                     name="action"
+                                                                                                     type="hidden"
+                                                                                                     value="search">
+      <input class="" id="form-search" name="search" placeholder="Search" type="text"></form>
+  </div>
+
+  <div class="table-list">
+
+    <div class="table-list-header">
+      <div class="table-list-header-count">
+        2 users
+      </div>
+      <div class="table-list-header-menu">
+        <div class="dropdown">
+          <a class="dropdown-menu dropdown-menu-link-icon" href="#"><strong>Sort <i
+            class="fa fa-caret-down"></i></strong></a>
+          <ul>
+            <li>
+              <a class="js-modal-replace"
+                 href="/?controller=UserListController&amp;action=show&amp;page=1&amp;order=users.id&amp;direction=ASC"
+                 title="">User ID</a></li>
+            <li>
+              ▲ <a
+              class="js-modal-replace"
+              href="/?controller=UserListController&amp;action=show&amp;page=1&amp;order=users.username&amp;direction=DESC"
+              title="">Username</a></li>
+            <li>
+              <a
+                class="js-modal-replace"
+                href="/?controller=UserListController&amp;action=show&amp;page=1&amp;order=users.name&amp;direction=ASC"
+                title="">Name</a></li>
+            <li>
+              <a
+                class="js-modal-replace"
+                href="/?controller=UserListController&amp;action=show&amp;page=1&amp;order=users.email&amp;direction=ASC"
+                title="">Email</a></li>
+            <li>
+              <a
+                class="js-modal-replace"
+                href="/?controller=UserListController&amp;action=show&amp;page=1&amp;order=users.is_ldap_user&amp;direction=ASC"
+                title="">Account type</a></li>
+            <li>
+              <a
+                class="js-modal-replace"
+                href="/?controller=UserListController&amp;action=show&amp;page=1&amp;order=users.role&amp;direction=ASC"
+                title="">Role</a></li>
+            <li>
+              <a
+                class="js-modal-replace"
+                href="/?controller=UserListController&amp;action=show&amp;page=1&amp;order=users.twofactor_activated&amp;direction=ASC"
+                title="">Two Factor</a></li>
+            <li>
+              <a
+                class="js-modal-replace"
+                href="/?controller=UserListController&amp;action=show&amp;page=1&amp;order=users.is_active&amp;direction=ASC"
+                title="">Status</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="table-list-row table-border-left">
+      <div>
+        <div class="dropdown">
+          <a class="dropdown-menu dropdown-menu-link-icon" href="#"><strong>#2 <i class="fa fa-caret-down"></i></strong></a>
+          <ul>
+            <li>
+              <a class="" href="/user/show/2" title=""><i aria-hidden="true" class="fa fa-fw fa-user"></i>View
+                profile</a></li>
+            <li>
+              <a class="js-modal-medium" href="/user/2/edit" title=""><i aria-hidden="true"
+                                                                         class="fa fa-edit fa-fw js-modal-medium"></i>Edit</a>
+            </li>
+            <li>
+              <a class="js-modal-medium" href="/user/2/avatar" title=""><i aria-hidden="true"
+                                                                           class="fa fa-smile-o fa-fw js-modal-medium"></i>Avatar</a>
+            </li>
+            <li>
+              <a class="js-modal-medium" href="/user/2/password" title=""><i aria-hidden="true"
+                                                                             class="fa fa-key fa-fw js-modal-medium"></i>Change
+                password</a>
+            </li>
+            <li>
+              <a class="js-modal-medium" href="/user/2/share" title=""><i aria-hidden="true"
+                                                                          class="fa fa-share-alt fa-fw js-modal-medium"></i>Public
+                access</a></li>
+            <li>
+              <a class="js-modal-medium" href="/user/2/notifications" title=""><i
+                aria-hidden="true" class="fa fa-bell-o fa-fw js-modal-medium"></i>Notifications</a></li>
+            <li>
+              <a class="js-modal-medium" href="/user/2/accounts" title=""><i
+                aria-hidden="true" class="fa fa-user-circle-o fa-fw js-modal-medium"></i>External accounts</a></li>
+            <li>
+              <a class="js-modal-medium" href="/user/2/integrations" title=""><i
+                aria-hidden="true" class="fa fa-rocket fa-fw js-modal-medium"></i>Integrations</a></li>
+            <li>
+              <a class="js-modal-medium" href="/user/2/api" title=""><i aria-hidden="true"
+                                                                        class="fa fa-cloud fa-fw js-modal-medium"></i>API
+                Access</a></li>
+
+            <li>
+              <a class="" href="/dashboard/2" title=""><i aria-hidden="true" class="fa fa-fw fa-dashboard"></i>User
+                dashboard</a></li>
+
+            <li>
+              <a class="js-modal-medium" href="/user/show/2/timesheet" title=""><i
+                aria-hidden="true" class="fa fa-clock-o fa-fw js-modal-medium"></i>Time tracking</a></li>
+            <li>
+              <a class="js-modal-medium" href="/user/show/2/last-logins" title=""><i
+                aria-hidden="true" class="fa fa-id-badge fa-fw js-modal-medium"></i>Last logins</a></li>
+            <li>
+              <a class="js-modal-medium" href="/user/show/2/sessions" title=""><i
+                aria-hidden="true" class="fa fa-database fa-fw js-modal-medium"></i>Persistent connections</a></li>
+            <li>
+              <a class="js-modal-medium" href="/?controller=UserViewController&amp;action=passwordReset&amp;user_id=2"
+                 title=""><i aria-hidden="true" class="fa fa-legal fa-fw js-modal-medium"></i>Password reset history</a>
+            </li>
+
+            <li>
+              <a class="js-modal-confirm"
+                 href="/?controller=UserStatusController&amp;action=confirmDisable&amp;user_id=2" title=""><i
+                aria-hidden="true" class="fa fa-times fa-fw js-modal-confirm"></i>Disable</a>
+            </li>
+            <li>
+              <a class="js-modal-confirm"
+                 href="/?controller=UserStatusController&amp;action=confirmRemove&amp;user_id=2" title=""><i
+                aria-hidden="true"
+                class="fa fa-trash-o fa-fw js-modal-confirm"></i>Remove</a></li>
+          </ul>
+        </div>
+        <span class="table-list-title ">
+        <div class="avatar avatar-20 avatar-inline"><div class="avatar-letter"
+
+                                                         title="User1">U</div></div>        <a class=""
+                                                                                               href="/user/show/2"
+                                                                                               title="">User1</a>    </span>
+      </div>
+
+      <div class="table-list-details table-list-details-with-icons">
+    <span class="table-list-category">
+        User    </span>
+
+        <span>TestUser</span>
+
+        <span><a href="mailto:user@gmail.com">user@gmail.com</a></span>
+
+      </div>
+
+      <div class="table-list-icons">
+    
+            <span title="Notifications are disabled">
+            <i aria-hidden="true" class="fa fa-bell-slash-o"></i>
+        </span>
+
+
+        <span title="User">
+            <i aria-hidden="true" class="fa fa-star-o"></i>
+        </span>
+
+      </div>
+    </div>
+    <div class="table-list-row table-border-left">
+      <div>
+        <div class="dropdown">
+          <a class="dropdown-menu dropdown-menu-link-icon" href="#"><strong>#1 <i class="fa fa-caret-down"></i></strong></a>
+          <ul>
+            <li>
+              <a class="" href="/user/show/1" title=""><i aria-hidden="true" class="fa fa-fw fa-user"></i>View
+                profile</a></li>
+            <li>
+              <a class="js-modal-medium" href="/user/1/edit" title=""><i aria-hidden="true"
+                                                                         class="fa fa-edit fa-fw js-modal-medium"></i>Edit</a>
+            </li>
+            <li>
+              <a class="js-modal-medium" href="/user/1/avatar" title=""><i aria-hidden="true"
+                                                                           class="fa fa-smile-o fa-fw js-modal-medium"></i>Avatar</a>
+            </li>
+            <li>
+              <a class="js-modal-medium" href="/user/1/password" title=""><i aria-hidden="true"
+                                                                             class="fa fa-key fa-fw js-modal-medium"></i>Change
+                password</a>
+            </li>
+            <li>
+              <a class="js-modal-medium" href="/user/1/2fa" title=""><i aria-hidden="true"
+                                                                        class="fa fa-shield fa-fw js-modal-medium"></i>Two
+                factor authentication</a>
+            </li>
+            <li>
+              <a class="js-modal-medium" href="/user/1/share" title=""><i aria-hidden="true"
+                                                                          class="fa fa-share-alt fa-fw js-modal-medium"></i>Public
+                access</a></li>
+            <li>
+              <a class="js-modal-medium" href="/user/1/notifications" title=""><i
+                aria-hidden="true" class="fa fa-bell-o fa-fw js-modal-medium"></i>Notifications</a></li>
+            <li>
+              <a class="js-modal-medium" href="/user/1/accounts" title=""><i
+                aria-hidden="true" class="fa fa-user-circle-o fa-fw js-modal-medium"></i>External accounts</a></li>
+            <li>
+              <a class="js-modal-medium" href="/user/1/integrations" title=""><i
+                aria-hidden="true" class="fa fa-rocket fa-fw js-modal-medium"></i>Integrations</a></li>
+            <li>
+              <a class="js-modal-medium" href="/user/1/api" title=""><i aria-hidden="true"
+                                                                        class="fa fa-cloud fa-fw js-modal-medium"></i>API
+                Access</a></li>
+
+            <li>
+              <a class="" href="/dashboard/1" title=""><i aria-hidden="true" class="fa fa-fw fa-dashboard"></i>User
+                dashboard</a></li>
+
+            <li>
+              <a class="js-modal-medium" href="/user/show/1/timesheet" title=""><i
+                aria-hidden="true" class="fa fa-clock-o fa-fw js-modal-medium"></i>Time tracking</a></li>
+            <li>
+              <a class="js-modal-medium" href="/user/show/1/last-logins" title=""><i
+                aria-hidden="true" class="fa fa-id-badge fa-fw js-modal-medium"></i>Last logins</a></li>
+            <li>
+              <a class="js-modal-medium" href="/user/show/1/sessions" title=""><i
+                aria-hidden="true" class="fa fa-database fa-fw js-modal-medium"></i>Persistent connections</a></li>
+            <li>
+              <a class="js-modal-medium" href="/?controller=UserViewController&amp;action=passwordReset&amp;user_id=1"
+                 title=""><i aria-hidden="true" class="fa fa-legal fa-fw js-modal-medium"></i>Password reset history</a>
+            </li>
+
+          </ul>
+        </div>
+        <span class="table-list-title ">
+        <div class="avatar avatar-20 avatar-inline"><div class="avatar-letter"
+
+                                                         title="admin">A</div></div>        <a class=""
+                                                                                               href="/user/show/1"
+                                                                                               title="">admin</a>    </span>
+      </div>
+
+      <div class="table-list-details table-list-details-with-icons">
+    <span class="table-list-category">
+        Administrator    </span>
+
+
+        <span><a href="mailto:admin@kanboard.com">admin@kanboard.com</a></span>
+
+      </div>
+
+      <div class="table-list-icons">
+    
+            <span title="Notifications are disabled">
+            <i aria-hidden="true" class="fa fa-bell-slash-o"></i>
+        </span>
+
+
+        <span title="Administrator">
+            <i aria-hidden="true" class="fa fa-star"></i>
+        </span>
+
+
+      </div>
+    </div>
+  </div>
+
+</section>
+
+
+</body>
+</html>

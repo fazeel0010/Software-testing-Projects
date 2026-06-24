@@ -1,0 +1,57 @@
+# Maven build output
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+.mvn/timing.properties
+
+# Java / JVM
+*.class
+*.log
+hs_err_pid*
+replay_pid*
+
+# IntelliJ IDEA
+.idea/
+*.iml
+out/
+
+# VS Code
+# .vscode/
+
+# Eclipse (if used by contributors)
+.project
+.classpath
+.settings/
+
+# NetBeans (if used by contributors)
+nbproject/private/
+build/
+nbbuild/
+dist/
+nbdist/
+.nb-gradle/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Test artifacts / reports (common for Selenium runs)
+surefire-reports/
+failsafe-reports/
+test-output/
+allure-results/
+allure-report/
+
+# Environment / secrets
+.env
+.env.*
+*.local
+
+# Microsoft Office temporary files
+~$*.xlsx
+~$*.docx

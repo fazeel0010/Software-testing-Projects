@@ -1,0 +1,19 @@
+services:
+  server:
+    build: ./server
+    ports:
+      - "8001:8001"
+    volumes:
+      - ./server/src:/app/src
+
+  proxy:
+    build: ./proxy
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./proxy/src:/app/src
+    depends_on:
+      - server
+    environment:
+      - TARGET_HOST=server
+      - TARGET_PORT=8001

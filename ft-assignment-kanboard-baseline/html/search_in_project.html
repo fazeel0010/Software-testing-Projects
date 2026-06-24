@@ -1,0 +1,341 @@
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+  <meta content="yes" name="mobile-web-app-capable">
+  <meta content="noindex,nofollow" name="robots">
+  <meta content="IE=edge" http-equiv="X-UA-Compatible">
+  <meta content="no-referrer" name="referrer">
+
+
+  <link href="/assets/img/favicon.png" rel="icon" type="image/png">
+  <link href="/assets/img/touch-icon-iphone.png" rel="apple-touch-icon">
+  <link href="/assets/img/touch-icon-ipad.png" rel="apple-touch-icon" sizes="72x72">
+  <link href="/assets/img/touch-icon-iphone-retina.png" rel="apple-touch-icon" sizes="114x114">
+  <link href="/assets/img/touch-icon-ipad-retina.png" rel="apple-touch-icon" sizes="144x144">
+
+  <title>
+    Search tasks (1) </title>
+
+</head>
+<body data-js-date-format="mm/dd/yy" data-js-time-format="HH:mm"
+      data-keyboard-shortcut-url="/?controller=DocumentationController&amp;action=shortcuts" data-login-url="/login"
+      data-status-url="/?controller=UserAjaxController&amp;action=status" data-timezone="UTC">
+
+
+<header>
+  <div class="title-container">
+    <h1>
+    <span class="logo">
+        <a class="" href="/dashboard" title="Dashboard">K<span>B</span></a>    </span>
+      <span class="title">
+                    Search tasks (1)                        </span>
+    </h1>
+  </div>
+  <div class="board-selector-container">
+    <div class="js-select-dropdown-autocomplete-rendered"
+         data-params="{&quot;name&quot;:&quot;boardId&quot;,&quot;placeholder&quot;:&quot;Display another project&quot;,&quot;items&quot;:{&quot;1&quot;:&quot;Test 2&quot;,&quot;2&quot;:&quot;Test private 2&quot;},&quot;redirect&quot;:{&quot;regex&quot;:&quot;PROJECT_ID&quot;,&quot;url&quot;:&quot;\/board\/PROJECT_ID&quot;},&quot;onFocus&quot;:[&quot;board.selector.open&quot;]}">
+      <div class="select-dropdown-input-container"><input name="boardId" type="hidden" value=""><input
+        class="select-dropdown-input"
+        placeholder="Display another project"
+        type="text"><i
+        class="fa fa-chevron-down select-dropdown-chevron"></i><span class="select-loading-icon"><i
+        class="fa fa-spinner fa-pulse"></i></span></div>
+    </div>
+  </div>
+  <div class="menus-container">
+        <span class="notification">
+    <a class="js-modal-medium" href="/?controller=WebNotificationController&amp;action=show&amp;user_id=1"
+       title="My notifications"><i aria-hidden="true" class="fa fa-bell fa-fw js-modal-medium"></i></a></span>
+    &nbsp;
+    <div class="dropdown header-creation-menu">
+      <a class="dropdown-menu dropdown-menu-link-icon" href="#"><i class="fa fa-plus fa-fw"></i><i
+        class="fa fa-caret-down"></i></a>
+      <ul>
+        <li>
+          <a class="js-modal-medium" href="/project/create" title=""><i aria-hidden="true"
+                                                                        class="fa fa-plus fa-fw js-modal-medium"></i>New
+            project</a></li>
+        <li>
+          <a class="js-modal-medium" href="/project/create/private" title=""><i aria-hidden="true"
+                                                                                class="fa fa-lock fa-fw js-modal-medium"></i>New
+            personal
+            project</a></li>
+      </ul>
+    </div>
+    &nbsp;<div class="dropdown">
+    <a class="dropdown-menu dropdown-menu-link-icon" href="#">
+      <div class="avatar avatar-20 avatar-inline">
+        <div class="avatar-letter" title="admin">A</div>
+      </div>
+      <i class="fa fa-caret-down"></i></a>
+    <ul>
+      <li class="no-hover"><strong>admin</strong></li>
+      <li>
+        <a class="" href="/dashboard/1" title=""><i aria-hidden="true" class="fa fa-fw fa-tachometer"></i>My
+          dashboard</a></li>
+      <li>
+        <a class="" href="/user/show/1" title=""><i aria-hidden="true" class="fa fa-fw fa-home"></i>My profile</a></li>
+      <li>
+        <a class="" href="/projects" title=""><i aria-hidden="true" class="fa fa-fw fa-folder"></i>Projects
+          management</a></li>
+      <li>
+        <a class="" href="/users" title=""><i aria-hidden="true" class="fa fa-fw fa-user"></i>Users management</a></li>
+      <li>
+        <a class="" href="/groups" title=""><i aria-hidden="true" class="fa fa-fw fa-group"></i>Groups management</a>
+      </li>
+      <li>
+        <a class="" href="/extensions" title=""><i aria-hidden="true" class="fa fa-fw fa-cubes"></i>Plugins</a></li>
+      <li>
+        <a class="" href="/settings" title=""><i aria-hidden="true" class="fa fa-fw fa-cog"></i>Settings</a></li>
+
+
+      <li>
+        <i aria-hidden="true" class="fa fa-fw fa-life-ring"></i>
+        <a href="https://docs.kanboard.org/en/1.2.15
+/user_guide/index.html" target="_blank">Documentation</a></li>
+      <li>
+        <a class="" href="/logout" title=""><i aria-hidden="true" class="fa fa-fw fa-sign-out"></i>Logout</a></li>
+    </ul>
+  </div>
+  </div>
+</header>
+<section class="page">
+  <div class="page-header">
+    <ul>
+      <li>
+        <a class="" href="/search/activity" title=""><i aria-hidden="true" class="fa fa-fw fa-search"></i>Activity
+          stream search</a></li>
+    </ul>
+  </div>
+
+  <div class="filter-box margin-bottom">
+    <form action="/" class="search" method="get">
+      <input id="form-controller" name="controller" type="hidden" value="SearchController"> <input id="form-action"
+                                                                                                   name="action"
+                                                                                                   type="hidden"
+                                                                                                   value="index">
+      <div class="input-addon">
+        <input class="input-addon-field" id="form-search" name="search" placeholder="Search" type="text"
+               value="status:open">
+        <div class="input-addon-item">
+          <div class="dropdown">
+            <a class="dropdown-menu dropdown-menu-link-icon" href="#" title="Default filters"><i
+              class="fa fa-filter fa-fw"></i><i class="fa fa-caret-down"></i></a>
+            <ul>
+              <li><a class="filter-helper filter-reset" data-filter="" href="#"
+                     title="Keyboard shortcut: &quot;r&quot;">Reset filters</a></li>
+              <li><a class="filter-helper" data-filter="status:open assignee:me" href="#">My tasks</a></li>
+              <li><a class="filter-helper" data-filter="status:open assignee:me due:tomorrow" href="#">My tasks due
+                tomorrow</a></li>
+              <li><a class="filter-helper" data-filter="status:open due:today" href="#">Tasks due today</a></li>
+              <li><a class="filter-helper" data-filter="status:open due:tomorrow" href="#">Tasks due tomorrow</a></li>
+              <li><a class="filter-helper" data-filter="status:open due:yesterday" href="#">Tasks due yesterday</a></li>
+              <li><a class="filter-helper" data-filter="status:closed" href="#">Closed tasks</a></li>
+              <li><a class="filter-helper" data-filter="status:open" href="#">Open tasks</a></li>
+              <li><a class="filter-helper" data-filter="status:open assignee:nobody" href="#">Not assigned</a></li>
+              <li><a class="filter-helper" data-filter="status:open assignee:anybody" href="#">Assigned</a></li>
+              <li><a class="filter-helper" data-filter="status:open category:none" href="#">No category</a></li>
+              <li>
+                <a href="https://docs.kanboard.org/en/1.2.15
+/user_guide/search.html" target="_blank">View advanced search syntax</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+
+  <div class="table-list">
+    <div class="table-list-header">
+      <div class="table-list-header-count">
+        1 task
+      </div>
+      <div class="table-list-header-menu">
+
+        <div class="dropdown">
+          <a class="dropdown-menu dropdown-menu-link-icon" href="#"><strong>Sort <i
+            class="fa fa-caret-down"></i></strong></a>
+          <ul>
+            <li>
+              ▼ <a
+              class="js-modal-replace"
+              href="/?controller=SearchController&amp;action=index&amp;search=status%3Aopen&amp;page=1&amp;order=tasks.id&amp;direction=ASC"
+              title="">Task ID</a></li>
+            <li>
+              <a
+                class="js-modal-replace"
+                href="/?controller=SearchController&amp;action=index&amp;search=status%3Aopen&amp;page=1&amp;order=swimlane_name&amp;direction=ASC"
+                title="">Swimlane</a></li>
+            <li>
+              <a
+                class="js-modal-replace"
+                href="/?controller=SearchController&amp;action=index&amp;search=status%3Aopen&amp;page=1&amp;order=column_name&amp;direction=ASC"
+                title="">Column</a></li>
+            <li>
+              <a
+                class="js-modal-replace"
+                href="/?controller=SearchController&amp;action=index&amp;search=status%3Aopen&amp;page=1&amp;order=category_name&amp;direction=ASC"
+                title="">Category</a></li>
+            <li>
+              <a
+                class="js-modal-replace"
+                href="/?controller=SearchController&amp;action=index&amp;search=status%3Aopen&amp;page=1&amp;order=tasks.priority&amp;direction=ASC"
+                title="">Priority</a></li>
+            <li>
+              <a
+                class="js-modal-replace"
+                href="/?controller=SearchController&amp;action=index&amp;search=status%3Aopen&amp;page=1&amp;order=tasks.position&amp;direction=ASC"
+                title="">Position</a></li>
+            <li>
+              <a
+                class="js-modal-replace"
+                href="/?controller=SearchController&amp;action=index&amp;search=status%3Aopen&amp;page=1&amp;order=tasks.title&amp;direction=ASC"
+                title="">Title</a></li>
+            <li>
+              <a
+                class="js-modal-replace"
+                href="/?controller=SearchController&amp;action=index&amp;search=status%3Aopen&amp;page=1&amp;order=assignee_name&amp;direction=ASC"
+                title="">Assignee</a></li>
+            <li>
+              <a
+                class="js-modal-replace"
+                href="/?controller=SearchController&amp;action=index&amp;search=status%3Aopen&amp;page=1&amp;order=tasks.date_due&amp;direction=ASC"
+                title="">Due date</a></li>
+            <li>
+              <a
+                class="js-modal-replace"
+                href="/?controller=SearchController&amp;action=index&amp;search=status%3Aopen&amp;page=1&amp;order=tasks.date_started&amp;direction=ASC"
+                title="">Start date</a></li>
+            <li>
+              <a
+                class="js-modal-replace"
+                href="/?controller=SearchController&amp;action=index&amp;search=status%3Aopen&amp;page=1&amp;order=tasks.is_active&amp;direction=ASC"
+                title="">Status</a></li>
+            <li>
+              <a
+                class="js-modal-replace"
+                href="/?controller=SearchController&amp;action=index&amp;search=status%3Aopen&amp;page=1&amp;order=tasks.reference&amp;direction=ASC"
+                title="">Reference</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="table-list-row color-yellow">
+      <div>
+        <div class="dropdown">
+          <a class="dropdown-menu dropdown-menu-link-icon" href="#"><strong>#1 <i class="fa fa-caret-down"></i></strong></a>
+          <ul>
+            <li>
+              <a
+                class=""
+                href="/?controller=TaskModificationController&amp;action=assignToMe&amp;task_id=1&amp;project_id=1&amp;redirect="
+                title=""><i aria-hidden="true" class="fa fa-fw fa-hand-o-right"></i>Assign to me</a></li>
+            <li>
+              <a
+                class=""
+                href="/?controller=TaskModificationController&amp;action=start&amp;task_id=1&amp;project_id=1&amp;redirect="
+                title=""><i aria-hidden="true" class="fa fa-fw fa-play"></i>Set the start date
+                automatically</a></li>
+            <li>
+              <a class="js-modal-large"
+                 href="/?controller=TaskModificationController&amp;action=edit&amp;task_id=1&amp;project_id=1" title=""><i
+                aria-hidden="true" class="fa fa-edit fa-fw js-modal-large"></i>Edit
+                the task</a></li>
+            <li>
+              <a class="js-modal-medium"
+                 href="/?controller=SubtaskController&amp;action=create&amp;task_id=1&amp;project_id=1" title=""><i
+                aria-hidden="true" class="fa fa-plus fa-fw js-modal-medium"></i>Add
+                a sub-task</a></li>
+            <li>
+              <a class="js-modal-medium"
+                 href="/?controller=TaskInternalLinkController&amp;action=create&amp;task_id=1&amp;project_id=1"
+                 title=""><i aria-hidden="true"
+                             class="fa fa-code-fork fa-fw js-modal-medium"></i>Add internal link</a></li>
+            <li>
+              <a class="js-modal-medium"
+                 href="/?controller=TaskExternalLinkController&amp;action=find&amp;task_id=1&amp;project_id=1" title=""><i
+                aria-hidden="true"
+                class="fa fa-external-link fa-fw js-modal-medium"></i>Add external link</a></li>
+            <li>
+              <a class="js-modal-small"
+                 href="/?controller=CommentController&amp;action=create&amp;task_id=1&amp;project_id=1" title=""><i
+                aria-hidden="true" class="fa fa-comment-o fa-fw js-modal-small"></i>Add
+                a comment</a></li>
+            <li>
+              <a class="js-modal-medium"
+                 href="/?controller=TaskFileController&amp;action=create&amp;task_id=1&amp;project_id=1" title=""><i
+                aria-hidden="true" class="fa fa-file fa-fw js-modal-medium"></i>Attach
+                a document</a></li>
+            <li>
+              <a class="js-modal-medium"
+                 href="/?controller=TaskPopoverController&amp;action=screenshot&amp;task_id=1&amp;project_id=1"
+                 title=""><i aria-hidden="true" class="fa fa-camera fa-fw js-modal-medium"></i>Add
+                a screenshot</a></li>
+            <li>
+              <a class="js-modal-small"
+                 href="/?controller=TaskDuplicationController&amp;action=duplicate&amp;task_id=1&amp;project_id=1"
+                 title=""><i aria-hidden="true" class="fa fa-files-o fa-fw js-modal-small"></i>Duplicate</a>
+            </li>
+            <li>
+              <a class="js-modal-small"
+                 href="/?controller=TaskDuplicationController&amp;action=copy&amp;task_id=1&amp;project_id=1"
+                 title=""><i aria-hidden="true" class="fa fa-clipboard fa-fw js-modal-small"></i>Duplicate
+                to another project</a></li>
+            <li>
+              <a class="js-modal-small"
+                 href="/?controller=TaskDuplicationController&amp;action=move&amp;task_id=1&amp;project_id=1"
+                 title=""><i aria-hidden="true" class="fa fa-clone fa-fw js-modal-small"></i>Move
+                to another project</a></li>
+            <li>
+              <a class="js-modal-small"
+                 href="/?controller=TaskMailController&amp;action=create&amp;task_id=1&amp;project_id=1" title=""><i
+                aria-hidden="true"
+                class="fa fa-paper-plane fa-fw js-modal-small"></i>Send by email</a></li>
+            <li>
+              <a class="js-modal-confirm"
+                 href="/?controller=TaskSuppressionController&amp;action=confirm&amp;task_id=1&amp;project_id=1"
+                 title=""><i aria-hidden="true"
+                             class="fa fa-trash-o fa-fw js-modal-confirm"></i>Remove</a></li>
+            <li>
+              <a class="js-modal-confirm"
+                 href="/?controller=TaskStatusController&amp;action=close&amp;task_id=1&amp;project_id=1" title=""><i
+                aria-hidden="true" class="fa fa-times fa-fw js-modal-confirm"></i>Close
+                this task</a></li>
+
+          </ul>
+        </div>
+
+        <span class="table-list-title ">
+        <a class="" href="/project/1/task/1" title="">task 3</a>    </span>
+      </div>
+
+      <div class="table-list-details">
+        Test 2 &gt;
+        Default swimlane &gt;
+        Backlog
+
+      </div>
+
+
+      <div class="task-list-icons">
+
+
+        <span title="Position">(1)</span>
+
+        <div class="task-icon-age">
+          <span class="task-icon-age-total" title="Task age in days">&lt;15m</span>
+          <span class="task-icon-age-column" title="Days in this column">&lt;15m</span>
+        </div>
+
+        <span class="task-priority" title="Task priority">P0</span></div>
+
+
+    </div>
+  </div>
+
+</section>
+
+
+</body>
+</html>

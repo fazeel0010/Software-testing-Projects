@@ -1,0 +1,136 @@
+General information:
+
+For this assignment, you will need to implement a set of Docker containers interacting among themselves. Technical details and information on the evaluation of the work are provided in the following.
+
+The project should be done in groups of max 3 students, according to the group definition submitted in AW: one submission for a single group (the list of students will be specified in the submitted document; see below).
+
+The context:
+
+By acting as a malicious user, you need to implement a custom HTTP service receiving data leak information.
+
+Also, by assuming you are a network administrator and the malicious service is (potentially) running on your network, you need to implement a "bridge"/proxy which receives requests from clients and forwards them to the (malicious) service (similarly, for the response), in a transparent way for the client (data leaker). In this case, the proxy also prevents data leakage by modifying (some of) the received request before sending it to the (malicious) server.
+
+Each client can interact with both the malicious server (essentially, just to test the possibility to implement a functioning data leaking receiver) and the proxy component (to check the protection capabilities implemented).
+
+Implemented data leak methods:
+
+In line to what we discussed during the lessons, it will be required to implement the following data leak methods:
+
+Dedicated header: shared data in the X-dataleak HTTP request parameter
+Headers order: shared data will be represented by an ordered sequence of HTTP requests: for each request, the comparison between the 3rd and 4th rows (the ones typically found after the row dedicated to the Host parameter) will determine if a 0 or a 1 is transfered: if row3 is lower (in terms of strings comparison) than row4, a 0 is transferred; on the other case, a 1 is transferred. The entire data will be represented by a sequence of HTTP requests, each transferring a single bit: according to conventional ASCII tables, 8 bits represents a single character (of the base64-encoded original text), and the final character (end of string) will be represented by a set of eight consecutive 0 values.
+All data will need to be shared as base64-encoded data.
+
+Sample of case 1 - Dedicated header:
+
+GET / HTTP/1.1
+[...]
+X-dataleak: <mydata>
+[...]
+where <mydata> is the base64-encoded data to be transferred.
+
+Sample of case 2 - Headers order:
+
+GET / HTTP/1.1
+Host: [...]
+Header1: [...]
+Header2: [...]
+[...]
+where the comparison is between Header1 and Header2.
+
+
+Communication interfaces:
+
+
+It will me mandatory to implement the following:
+
+
+A docker-compose file which, after executing docker compose up will run both the services and map ports to the local ports: port 8000/tcp for the proxy service, 8001/tcp for the malicious service.
+An endpoint /setup which is not filtered/modified by the proxy component and manages data leak setup: it takes, as JSON-encoded POST data, the following:
+entrypoint (string): the URI to use for the upcoming data leak connection
+type (string-based enum: allowed values are dedicatedheader and headersorder): the data leak type to use for the given entry point
+A dynamic entrypoint (see the specification reported above in point 2), to implement the specific leak, by accepting PUT requests.
+A dynamic entrypoint (see the specification reported above in point 2), to get leaked data, through a dedicated a GET request. In case the entrypoint is not found or not available yet, a 404 error (or any value different from 200) must be provided (200 otherwise).
+Note that only the dynamic entrypoint at point 3 above is filtered by the proxy.
+
+As an example, one possible interaction by the attacker (intended as the user leaking data) is the following (note that newlines, empty lines or additional headers are omitted for the sake of readability), transfering the content ciao (base64-encoded to Y2lhbw==):
+
+
+POST /setup HTTP/1.1
+Host: localhost
+Content-Type: application/json
+Content-Length: [...]
+{"entrypoint": "sampleleak","type": "dedicatedheader"}
+PUT /sampleleak HTTP/1.1
+Host: localhost
+X-dataleak: Y2lhbw==
+[...]
+GET /sampleleak HTTP/1.1
+Host: localhost
+[...]
+It will also be mandatory to prepare a proper README.md mark-down text file detailing how to run your scenario, with build and run information in order to make it simple to replicate your scenario. The README file has to provide information to an external user on how to run everything from scratch.
+
+In the root folder of your project put a group_<groupname>.csv file with the list of students submitting the assignment, with their name, surname, student number (matricola).
+
+Sample content:
+
+name,surname,studentnumber,email
+Mario,Rossi,12345,mario.rossi@unige.it
+Stefano,Bianchi,67890,stefano.bianchi@unige.it
+"Gian Paolo","De Bernardi",13579,gianpaolo.debernardi@unige.it
+
+Release instructions:
+
+
+The tool source code must be released as a single ZIP file on the AulaWeb page of the course, also including the README mark-down text file with detailed step-by-step instructions useful to replicate the scenario from scratch, with information on how to run, test and set up the considered services, used for the oral live demonstration.
+
+
+All submissions have to be sent and (if AW needs it) confirmed within the assignment deadline.
+
+
+Evaluation:
+
+
+The final mark for the assignment will be affected by the following:
+
+Basic requirements: all mandatory requirements are implemented properly
+README file quality: a proper README file is produced
+Code quality: related the code structure, comments in code, management of specific conditions
+Extensibility: the system is implemented to simplify the development of additional data leak methods, considering both the malicious component and the proxy one; also, consider that how to extend the tool has to be detailed in the README file
+In case the system does not implement all requirements, the oral discussion may not take place and the assignment will be considered not passed.
+
+Evaluation will take around two weeks, even more in the post-July period, although typical times are just a few days. In case of urgency, please send an email specifying the reasons and the deadline to prof. Cambiaso, cc prof. Ricca.
+
+
+Oral examination:
+
+
+The submitted work will be discussed during the oral part of the exam. In detail, the evaluation will deeply consider the oral discussion of the implemented system, with live execution of it. Therefore, be ready to replicate and run the implemented tools during a live demonstration.
+
+
+FAQ:
+
+
+Is it needed to implement HTTPS? No, it is not requested, so, in case of implementation of HTTPS only, the evaluation will be reduced for that. Given that said, if you really wish to implement both HTTP and HTTPS, you can do it, but only HTTP endpoints will be tested.
+Can I use the same TCP connection for the Headers order scenario? Yes, but we may also have multiple dedicated connections.
+Which programming language should I use for implementing the assignment? You are free to use the programming language you prefer.
+Is it needed to implement the attacker? No, it is not needed: while you can embed it in the submitted document or describe how to trigger it in the README file, its implementation is not required. If you embed it, it is expect it is explained how to use it in the README; similarly, if you do not embed it, it is expected that the README does not mention it (while it could mention the use of standard commands like curl).
+Is it mandatory to implement a set of containers and the docker-compose file? Can't I just implement a set of services or a single service? No, while you could use tools different from Docker (like  Kubernetes or Podman), it is mandatory to implement the services as containers, according to the requirements reported above.
+Where can I find an ASCII table to use as a reference? You can use, for instance, https://www.ascii-code.com
+Is it needed to support multiple parallel data leak activites? Yes.
+Is it needed to implement some kind of authentication? No, it's not.
+What should the proxy/bridge do when managing a malicious exploitation attempt? You're free to choose: the only relevant result is that, given an arbitrary exploitation type, just considering PUT requests related to malicious data transfers, the transfer is not successful (e.g., it is raising an error, never ending, or leaking random data).
+Can I use AI to support the implementation? While it can support you in the development, it is highly discouraged to extensively use it (you need to implement and know the tool in detail, not the AI).
+What do you suggest to implement extensibility? You can take a look at the approache used in DockerChannel (and related paper mentioned at the provided link).
+Can I implement extensibility in a different way? Yes, you're free to impelment it, but please consider it will be relevant to support the developer implementing a custom component/module/class as much as possible.
+Why is it needed to implement a "proxy" component; can't I directly fix the data leak server container? No, this is the main concept behind the assignment: in some cases, it is not possible to modify software in production and you still need to protect it: the use of a bridge is one of the possible solutions.
+Can I make my work public? Yes, you can do that, but after you got the final evaluation mark. In that case, if you wish, you can mention me with my GitHub profile @auino.
+Can I include additional containers, including, e.g., a DBMS? Yes, you're free to implement it as you prefer, but please consider that the requirements must be satisfied, in terms of entrypoints and adopted ports.
+If you need further information or are stuck in a specific context, use the dedicated forum on AulaWeb.
+
+
+Some useful links (not mandatory to consider):
+
+
+https://www.ascii-code.com
+https://github.com/cybersecurity-cnr/DockerChannel 
+https://www.sciencedirect.com/science/article/pii/S2352711023002728
